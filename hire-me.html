@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me! - Suryansh Thakur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hire-me.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="hire-me-page">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="nav-brand">
+                    <span class="highlight">S</span>uryansh <span class="highlight">T</span>hakur
+                </a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio id="meow-music" controls loop autoplay>
+            <source src="assets/audio/meow-song.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="play-button" class="play-button">
+            <i class="fas fa-play"></i>
+            <span>Play Music</span>
+        </button>
+        <div class="music-info">
+            <span>Now Playing: Meow Meow Song</span>
+            <div class="music-visualizer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hire Me Section -->
+    <section class="hire-me-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-heart section-icon"></i>
+                <h2 class="section-title">Please Hire Me!</h2>
+            </div>
+
+            <div class="cat-meme-grid">
+                <div class="meme-card">
+                    <img src="assets/pleading cat.jpg" alt="Pleading cat" class="meme-img">
+                    <p class="meme-text">Looking for a purr-fect developer?</p>
+                </div>
+                <div class="meme-card">
+                    <img src="assets/coding cat.jpg" alt="Cute coding cat" class="meme-img">
+                    <p class="meme-text">I can write clean code... !</p>
+                </div>
+                <div class="meme-card">
+                    <img src="assets/workcat.gif" alt="Work Cat" class="meme-img">
+                    <p class="meme-text">Hard worker, will work for treats!</p>
+                </div>
+            </div>
+
+            <div class="hire-me-content">
+                <h3>Why You Should Hire Me:</h3>
+                <ul class="reasons-list">
+                    <li><i class="fas fa-check"></i> Passionate about coding like cats are about yarn</li>
+                    <li><i class="fas fa-check"></i> Always land on my feet (great problem solver)</li>
+                    <li><i class="fas fa-check"></i> Nine lives worth of dedication</li>
+                    <li><i class="fas fa-check"></i> Purr-fectionist attention to detail</li>
+                    <li><i class="fas fa-check"></i> Great at catching bugs!</li>
+                </ul>
+
+                <div class="cta-container">
+                    <a href="mailto:suryanshwork1811@gmail.com" class="hire-me-btn">
+                        <i class="fas fa-envelope"></i>
+                        Hire Me Right Meow?!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+        <i class="fas fa-cat icon-float" style="--delay: 0s; --top: 20%; --left: 8%;"></i>
+        <i class="fas fa-paw icon-float small" style="--delay: 2s; --top: 35%; --right: 12%;"></i>
+        <i class="fas fa-heart icon-float small" style="--delay: 4s; --top: 65%; --left: 15%;"></i>
+        <i class="fas fa-cat icon-float" style="--delay: 6s; --top: 80%; --right: 10%;"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/suryanshthakur" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/beingcrazyasalways" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <div class="footer-buttons">
+                        <a href="hire-me.html" class="footer-btn hire-btn">
+                            <i class="fas fa-heart"></i>
+                            Hire Me
+                        </a>
+                        <a href="resume.pdf" class="footer-btn resume-btn" download>
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                        <a href="certificates.html" class="footer-btn cert-btn">
+                            <i class="fas fa-certificate"></i>
+                            View Certificates
+                        </a>
+                    </div>
+                    <p class="copyright">© 2025 Suryansh Thakur. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#home" class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="hire-me.js"></script>
+</body>
+</html> 

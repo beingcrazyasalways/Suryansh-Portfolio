@@ -1,0 +1,512 @@
+/* Hire Me Page Styles */
+:root {
+    /* Light Theme Variables */
+    --primary: #1a1a1a;
+    --secondary: #333333;
+    --accent: #f5f5f5;
+    --background: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --border: #e0e0e0;
+    --neon-purple: #b829ff;
+    --neon-purple-dark: #9000ff;
+    --neon-purple-glow: rgba(184, 41, 255, 0.2);
+    --blue-primary: #0072ff;
+    --blue-secondary: #00c6ff;
+    --blue-glow: rgba(0, 114, 255, 0.2);
+    --home-bg: #f8f8ff;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --floating-icon-opacity: 0.1;
+    --floating-icon-glow: drop-shadow(0 0 3px var(--neon-purple));
+}
+
+[data-theme="dark"] {
+    --primary: #ffffff;
+    --secondary: #cccccc;
+    --accent: #1f1f1f;
+    --background: #0a0a0a;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --border: #2a2a2a;
+    --home-bg: #050505;
+    --card-bg: #151515;
+    --shadow: 0 4px 20px rgba(184, 41, 255, 0.15);
+    --floating-icon-opacity: 0.25;
+    --floating-icon-glow: drop-shadow(0 0 20px var(--neon-purple));
+}
+
+.hire-me-page {
+    background: var(--background);
+    color: var(--text-main);
+}
+
+/* Music Player */
+.music-player {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.music-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--neon-purple);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--neon-purple-glow);
+}
+
+.music-info {
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+.music-visualizer {
+    display: flex;
+    gap: 3px;
+    height: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.bar {
+    width: 3px;
+    height: 100%;
+    background: var(--neon-purple);
+    animation: visualizer 1s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.bar:nth-child(1) { animation-delay: 0.1s; }
+.bar:nth-child(2) { animation-delay: 0.2s; }
+.bar:nth-child(3) { animation-delay: 0.3s; }
+.bar:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes visualizer {
+    0% { height: 20%; }
+    50% { height: 100%; }
+    100% { height: 20%; }
+}
+
+/* Hire Me Section */
+.hire-me-section {
+    background: linear-gradient(135deg, var(--home-bg) 0%, var(--background) 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-icon {
+    color: var(--neon-purple);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.section-title {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-purple-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s ease-in-out infinite;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue-primary), var(--neon-purple));
+    border-radius: 2px;
+}
+
+/* Certificates Section Styles */
+.certificates-section {
+    margin: 4rem 0;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    color: var(--text-main);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.certificate-card {
+    background: var(--background);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-purple);
+    box-shadow: 0 8px 25px var(--neon-purple-glow);
+}
+
+.certificate-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.05);
+}
+
+.certificate-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.certificate-info h4 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin: 0 0 0.5rem 0;
+}
+
+.certificate-info p {
+    color: var(--text-muted);
+    margin: 0.25rem 0;
+}
+
+.certificate-date {
+    font-size: 0.9rem;
+    margin-bottom: 1rem !important;
+}
+
+.view-certificate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--blue-primary), var(--neon-purple));
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-certificate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--neon-purple-glow);
+    background: linear-gradient(135deg, var(--neon-purple), var(--blue-primary));
+}
+
+.view-certificate-btn i {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hire-me-section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .certificate-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .meme-card {
+        padding: 1rem;
+    }
+    
+    .meme-text {
+        font-size: 1rem;
+    }
+    
+    .reasons-list li {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+    
+    .hire-me-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .music-player {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.8rem;
+    }
+    
+    .youtube-container {
+        width: 100%;
+        height: 56.25vw; /* 16:9 aspect ratio for full width */
+        max-height: 169px;
+    }
+}
+
+.icon-float {
+    position: fixed;
+    font-size: 1.2rem;
+    color: var(--neon-purple);
+    opacity: 0.1;
+    animation: floatIcon 20s ease-in-out infinite;
+    animation-delay: var(--delay);
+    filter: drop-shadow(0 0 3px var(--neon-purple));
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.icon-float.small {
+    font-size: 0.8rem;
+    opacity: 0.08;
+}
+
+.icon-float:hover {
+    opacity: 0.2;
+    filter: drop-shadow(0 0 5px var(--neon-purple));
+    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    50% {
+        transform: translate(-15px, -15px) rotate(15deg) scale(1.1);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+.icon-float {
+    top: var(--top);
+    left: var(--left);
+    right: var(--right);
+}
+
+.cat-meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.meme-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.meme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--neon-purple-glow);
+    border-color: var(--neon-purple);
+}
+
+.meme-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border);
+}
+
+.meme-text {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.hire-me-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.hire-me-content h3 {
+    color: var(--neon-purple);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.reasons-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reasons-list li {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.reasons-list li i {
+    color: var(--neon-purple);
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.hire-me-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--neon-purple);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--neon-purple);
+    box-shadow: 0 0 15px var(--neon-purple-glow);
+}
+
+.hire-me-btn:hover {
+    transform: translateY(-3px);
+    background: transparent;
+    color: var(--neon-purple);
+    box-shadow: 0 0 25px var(--neon-purple);
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    color: var(--neon-purple);
+    transform: translateX(-5px);
+}
+
+.youtube-container {
+    position: relative;
+    width: 300px;
+    height: 169px; /* 16:9 aspect ratio */
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.play-button {
+    background: var(--neon-purple);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--neon-purple-glow);
+}
+
+.play-button i {
+    font-size: 1rem;
+}
+
+.play-button.playing {
+    background: #666;
+}
+
+/* Floating Icons for Hire Me Page */
+.floating-icons .icon-float {
+    opacity: var(--floating-icon-opacity);
+    filter: drop-shadow(var(--floating-icon-glow));
+} 
