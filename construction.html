@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction - LinkedIn Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="construction.css">
+</head>
+<body>
+    <div class="construction-container">
+        <div class="floating-icons">
+            <i class="fas fa-code floating-icon"></i>
+            <i class="fas fa-laptop-code floating-icon"></i>
+            <i class="fas fa-terminal floating-icon"></i>
+            <i class="fas fa-database floating-icon"></i>
+            <i class="fas fa-server floating-icon"></i>
+            <i class="fas fa-network-wired floating-icon"></i>
+            <i class="fas fa-microchip floating-icon"></i>
+            <i class="fas fa-cogs floating-icon"></i>
+        </div>
+        <div class="construction-content">
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <h1 class="construction-title">LinkedIn Profile Under Construction</h1>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">0%</div>
+            </div>
+            <div class="game-container">
+                <div class="profile-pieces">
+                    <div class="piece" draggable="true" data-piece="photo">
+                        <i class="fas fa-camera"></i>
+                        <span>Profile Photo</span>
+                    </div>
+                    <div class="piece" draggable="true" data-piece="headline">
+                        <i class="fas fa-heading"></i>
+                        <span>Headline</span>
+                    </div>
+                    <div class="piece" draggable="true" data-piece="summary">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Summary</span>
+                    </div>
+                    <div class="piece" draggable="true" data-piece="experience">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Experience</span>
+                    </div>
+                    <div class="piece" draggable="true" data-piece="education">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </div>
+                </div>
+                <div class="profile-canvas">
+                    <div class="profile-frame">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user-plus"></i>
+                            <p>Drag and drop pieces here to build the profile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="construction-message">
+                My LinkedIn profile is currently under construction. Help me build it by placing the pieces in the correct order!
+                The correct sequence is: Photo → Headline → Summary → Experience → Education.
+            </p>
+        </div>
+    </div>
+    
+    <script src="theme.js"></script>
+    <script src="construction.js"></script>
+</body>
+</html> 
+</html> 
